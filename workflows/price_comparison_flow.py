@@ -65,5 +65,4 @@ class PriceComparisonWorkflow(Workflow):
 
 
         print(f"[INFO] Returning {len(final_results)} matched results.")
-        sorted_results = sorted(final_results, key=lambda x: x.get("price", float('inf')))
-        return RunResponse(content={"results": sorted_results})
+        return RunResponse(content={"results": final_results})
